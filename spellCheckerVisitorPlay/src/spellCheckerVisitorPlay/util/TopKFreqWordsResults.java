@@ -11,12 +11,12 @@ import java.util.List;
 
 public class TopKFreqWordsResults implements Results {
 	private String topKOutputFilename;
-	private static List<List<String>> result;
+	private static List<String> result;
 	private File outputFile;
 	private FileWriter outputFileWriter;
 	public TopKFreqWordsResults(String topKOutputFilenameIn) {
 		topKOutputFilename = topKOutputFilenameIn;
-		result = new ArrayList<List<String>>();
+		result = new ArrayList<String>();
 		try {
 			outputFile = new File(topKOutputFilename);
 			outputFileWriter = new FileWriter(topKOutputFilename,false);
@@ -40,7 +40,7 @@ public class TopKFreqWordsResults implements Results {
 		
 			} else {
 				//outputFileWriter = new FileWriter(itemOutputFile,true);
-					for(List<String> res: result) {
+					for(String res: result) {
 					outputFileWriter.write(res.toString() + "\n");
 					outputFileWriter.flush();
 					}
@@ -66,10 +66,8 @@ public class TopKFreqWordsResults implements Results {
 	}
 
 	@Override
-	public void setResult(List<String> topK) {
+	public void setResult(String topK) {
 		result.add(topK);
-
-		
 	}
 
 	

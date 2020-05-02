@@ -66,7 +66,7 @@ public class TopKMostFreqAnalyzer implements Visitor {
 
 		System.out.println(topK);
 		
-		topKFreqWordsResults.setResult(topK);
+		topKFreqWordsResults.setResult(topK.toString());
 		
 		
 		

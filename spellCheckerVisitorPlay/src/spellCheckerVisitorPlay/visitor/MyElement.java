@@ -1,11 +1,17 @@
 package spellCheckerVisitorPlay.visitor;
 
+import java.io.IOException;
+
 public class MyElement implements Element {
 	private String sentence;
 
 	@Override
 	public void accept(Visitor visitor) {
-		visitor.visit(this);
+		try {
+			visitor.visit(this);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
 	}
 

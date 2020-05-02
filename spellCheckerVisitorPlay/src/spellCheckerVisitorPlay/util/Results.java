@@ -17,7 +17,7 @@ public interface Results {
 	 * Method to close resources opened for writing to file
 	 */
 	public void close();
-	public void setResult(List<String> topK);
+	public void setResult(String result);
 	
 	
 	

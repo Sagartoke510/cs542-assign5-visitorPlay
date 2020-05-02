@@ -9,7 +9,6 @@ import spellCheckerVisitorPlay.util.FileProcessor;
 public class MyArrayList implements Element {
 	private ArrayList<Element> internalArraylist = new ArrayList<Element>();
 	static FileProcessor fp;
-	private static String partialSentence = null;
 	static int statementCount = 0;
 	
 	
