@@ -70,7 +70,9 @@ public class SpellCheckerVisitorDriver {
 					ValidatorFetcher.missingFileValidator(acceptableWordsFilename),
 					ValidatorFetcher.emptyFileValidator(inputFilename),
 					ValidatorFetcher.emptyFileValidator(acceptableWordsFilename),
-					ValidatorFetcher.fileContentValidator(inputFilename), ValidatorFetcher.kValueValidator(k));
+					ValidatorFetcher.fileContentValidator(inputFilename),
+					ValidatorFetcher.fileContentValidatorAccept(acceptableWordsFilename),
+					ValidatorFetcher.kValueValidator(k));
 
 		} catch (Exception e) {
 			e.printStackTrace();

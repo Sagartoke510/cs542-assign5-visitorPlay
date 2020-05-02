@@ -2,7 +2,7 @@ package spellCheckerVisitorPlay.userDefinedException;
 /**
  * 
  * @author Sagar Toke
- * Class {@code WindowException} is a type size exception
+ * Class {@code KValueException} is a type size exception
  *
  */
 public class KValueException extends Exception {

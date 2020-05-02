@@ -50,6 +50,20 @@ public class ValidatorFetcher {
 			}
 		};
 	}
+	public static Validator fileContentValidatorAccept(String acceptableWordFile) {
+		return new Validator() {
+			@Override
+			public void run() throws IOException {
+				String text = "";
+				String pattern = "^[a-zA-Z\\r\\n]*$";
+				text = new String(Files.readAllBytes(Paths.get(acceptableWordFile)));
+				if (!text.matches(pattern)) {
+					throw new IOException("Invalid line or line contains more than one word");
+				}
+
+			}
+		};
+	}
 
 	public static Validator kValueValidator(String k) {
 		return new Validator() {
