@@ -1,18 +1,24 @@
 package spellCheckerVisitorPlay.visitor;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-import spellCheckerVisitorPlay.util.FileProcessor;
 import spellCheckerVisitorPlay.util.Results;
 
+/**
+ * 
+ * @author Sagar Toke
+ * 
+ *         This {@code TopKMostFreqAnalyzer} class implements {@code Visitor}
+ *         interface which checks for the TopK most frequent word in the
+ *         sentence
+ *
+ */
 public class TopKMostFreqAnalyzer implements Visitor {
 	private int k;
 	private Results topKFreqWordsResults;
@@ -65,11 +71,8 @@ public class TopKMostFreqAnalyzer implements Visitor {
 		}
 
 		System.out.println(topK);
-		
+
 		topKFreqWordsResults.setResult(topK.toString());
-		
-		
-		
 
 	}
 

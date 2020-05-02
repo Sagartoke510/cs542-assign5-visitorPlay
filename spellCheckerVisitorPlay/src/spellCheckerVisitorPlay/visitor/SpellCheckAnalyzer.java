@@ -9,6 +9,15 @@ import java.util.List;
 
 import spellCheckerVisitorPlay.util.Results;
 
+/**
+ * 
+ * @author Sagar Toke
+ * 
+ *         This {@code SpellCheckAnalyzer} class implements {@code Visitor}
+ *         interface which checks for the spelling mistakes in the words of the
+ *         line and forward it to SpellCheckResult
+ *
+ */
 public class SpellCheckAnalyzer implements Visitor {
 
 	private String acceptableWordsFilename;
@@ -73,6 +82,10 @@ public class SpellCheckAnalyzer implements Visitor {
 
 	}
 
+	/**
+	 * Method to read the acceptableWordFile 
+	 * @throws IOException Exception 
+	 */
 	protected void readAccetableFile() throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader(new File(acceptableWordsFilename)));
 		String line = "";

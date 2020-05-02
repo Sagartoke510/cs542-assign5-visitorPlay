@@ -5,7 +5,14 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import spellCheckerVisitorPlay.util.FileProcessor;
-
+/**
+ * 
+ * @author Sagar Toke
+ * 
+ *         This {@code MyArrayList} class implements {@code Element}
+ *         interface which stores the sentences into the MyElement
+ *
+ */
 public class MyArrayList implements Element {
 	private ArrayList<Element> internalArraylist = new ArrayList<Element>();
 	static FileProcessor fp;
@@ -59,6 +66,10 @@ public class MyArrayList implements Element {
 
 	}
 
+	/**
+	 * method to iterator over internal arraylist
+	 * @return element iterator
+	 */
 	public Iterator<Element> getIterator() {
 		return internalArraylist.iterator();
 	}

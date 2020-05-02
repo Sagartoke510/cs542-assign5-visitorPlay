@@ -8,20 +8,28 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 
+ * @author Sagar Toke
+ * 
+ *         This {@code TopKFreqWordsResults} class implements {@code Results}
+ *         interface which store results and write file logic is performed by
+ *         the driver class
+ *
+ */
 public class TopKFreqWordsResults implements Results {
 	private String topKOutputFilename;
 	private static List<String> result;
 	private File outputFile;
 	private FileWriter outputFileWriter;
+
 	public TopKFreqWordsResults(String topKOutputFilenameIn) {
 		topKOutputFilename = topKOutputFilenameIn;
 		result = new ArrayList<String>();
 		try {
 			outputFile = new File(topKOutputFilename);
-			outputFileWriter = new FileWriter(topKOutputFilename,false);
+			outputFileWriter = new FileWriter(topKOutputFilename, false);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -31,23 +39,19 @@ public class TopKFreqWordsResults implements Results {
 		try {
 
 			if (!Files.exists(Paths.get(topKOutputFilename))) {
-				
+
 				outputFile.createNewFile();
 
-				
 				outputFileWriter.write(result + "\n");
-				//outputFileWriter.flush();
-		
+
 			} else {
-				//outputFileWriter = new FileWriter(itemOutputFile,true);
-					for(String res: result) {
+				for (String res : result) {
 					outputFileWriter.write(res.toString() + "\n");
 					outputFileWriter.flush();
-					}
-					
+				}
+
 			}
-			
-			//close();
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -56,20 +60,17 @@ public class TopKFreqWordsResults implements Results {
 	@Override
 	public void close() {
 		try {
-			//outputFileWriter.flush();
 			outputFileWriter.close();
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 	}
 
 	@Override
 	public void setResult(String topK) {
 		result.add(topK);
 	}
-
-	
 
 }

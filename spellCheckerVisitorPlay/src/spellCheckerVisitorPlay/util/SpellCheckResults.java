@@ -6,6 +6,15 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * 
+ * @author Sagar Toke
+ * 
+ *         This {@code SpellCheckResults} class implements {@code Results}
+ *         interface which store results and write file logic is performed by
+ *         the driver class
+ *
+ */
 public class SpellCheckResults implements Results {
 	private String spellCheckOutputFilename;
 	private File outputFile;

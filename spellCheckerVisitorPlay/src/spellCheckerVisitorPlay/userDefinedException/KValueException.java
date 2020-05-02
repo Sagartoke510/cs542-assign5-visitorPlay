@@ -9,7 +9,7 @@ public class KValueException extends Exception {
 
 	/**
 	 * Constructs a exception with specific message
-	 * @param windowException the detailed Exception message
+	 * @param kValueException the detailed Exception message
 	 */
 	public KValueException(String kValueException) {
 		super(kValueException);
