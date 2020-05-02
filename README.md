@@ -5,7 +5,7 @@
 -----------------------------------------------------------------------
 Point to note:
 1.Used 1 slack day
-2. input.txt and items.text should be in spellCheckerVisitorPlay/ directory 
+2. input.txt and acceptableWords.text should be in spellCheckerVisitorPlay/ directory 
 3. Output file will be generated at spellCheckerVisitorPlay/ directory 
 
 Following are the commands and the instructions to run ANT on your project.
