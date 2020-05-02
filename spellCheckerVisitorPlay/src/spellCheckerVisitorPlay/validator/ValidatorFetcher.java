@@ -41,7 +41,7 @@ public class ValidatorFetcher {
 			@Override
 			public void run() throws IOException {
 				String text = "";
-				String pattern = "^[a-zA-Z\\s\\.]*$";
+				String pattern = "^[a-zA-Z\\ \\.]*$";
 				text = new String(Files.readAllBytes(Paths.get(inputFilePath)));
 				if (!text.matches(pattern)) {
 					throw new IOException("Invalid line or line contains other than characters.");
@@ -55,7 +55,7 @@ public class ValidatorFetcher {
 			@Override
 			public void run() throws IOException {
 				String text = "";
-				String pattern = "^[a-zA-Z\\r]*$";
+				String pattern = "^[a-zA-Z\\r\\n]*$";
 				text = new String(Files.readAllBytes(Paths.get(acceptableWordFile)));
 				if (!text.matches(pattern)) {
 					throw new IOException("Invalid line or line contains more than one word");
