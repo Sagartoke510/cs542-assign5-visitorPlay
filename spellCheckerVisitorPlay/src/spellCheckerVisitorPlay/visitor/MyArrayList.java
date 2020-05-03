@@ -40,7 +40,7 @@ public class MyArrayList implements Element {
 				String lineFromFile = fp.poll();
 				String lineWithoutDots = lineFromFile.replaceAll("\\.", "");
 				int sentenceCount = lineFromFile.length() - lineWithoutDots.length();
-				for (String sentence : lineFromFile.split("\\.")) {
+				for (String sentence : lineFromFile.trim().split("\\.")) {
 					Element myElement = new MyElement();
 					
 
